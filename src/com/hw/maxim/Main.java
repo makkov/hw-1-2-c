@@ -1,7 +1,5 @@
 package com.hw.maxim;
 
-import java.time.LocalDate;
-
 public class Main {
 
     public static void main(String[] args) {
@@ -20,14 +18,8 @@ public class Main {
         System.out.println("Задача 5");
         task5();
 
-        System.out.println("Задача 6");
-        task6();
-
-        System.out.println("Задача 7");
-        task7();
-
-        System.out.println("Задача 8");
-        task8();
+        System.out.println("FizzBuzz");
+        fizzBuzz();
     }
 
     private static void task1() {
@@ -142,6 +134,27 @@ public class Main {
 
         for (int i = currentYear - prevTerm; i < currentYear + nextTerm; i++) {
             if (i % cometFrequency == 0) {
+                System.out.println(i);
+            }
+        }
+    }
+
+    /*
+    Числа от 0 до 100
+    Если число делится на 3, вместо него вывести «Fizz».
+    Если число делится на 5, вместо него вывести «Buzz».
+    А если число делится одновременно на 3 и на 5, то надо вместо него вывести «FizzBuzz».
+    Иначе вывести само число
+    * */
+    private static void fizzBuzz() {
+        for (int i = 1; i <= 100; i++) {
+            if (i % 3 == 0 && i % 5 == 0) {
+                System.out.println("FizzBuzz");
+            } else if (i % 3 == 0) {
+                System.out.println("Fizz");
+            } else if (i % 5 == 0) {
+                System.out.println("Buzz");
+            } else {
                 System.out.println(i);
             }
         }
